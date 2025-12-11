@@ -1,0 +1,40 @@
+[[language]]
+name = "rust"
+auto-format = true
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config.inlayHints.bindingModeHints]
+enable = false
+
+[language-server.rust-analyzer.config.inlayHints.closingBraceHints]
+minLines = 10
+
+[language-server.rust-analyzer.config.inlayHints.closureReturnTypeHints]
+enable = "with_block"
+
+[language-server.rust-analyzer.config.inlayHints.discriminantHints]
+enable = "fieldless"
+
+[language-server.rust-analyzer.config.inlayHints.lifetimeElisionHints]
+enable = "skip_trivial"
+
+[language-server.rust-analyzer.config.inlayHints.typeHints]
+hideClosureInitialization = false
+
+[[language]]
+name = "c"
+auto-format = true
+
+[language-server.clangd]
+command = "clangd"
+args = ["--background-index", "--clang-tidy"]
+
+[[language]]
+name = "nix"
+auto-format = true
+
+[language-server.nil]
+command = "nil"
+args = []

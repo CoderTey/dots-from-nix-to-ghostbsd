@@ -1,0 +1,235 @@
+* {
+  border: none;
+  font-family: Maple Mono NF CN;
+  font-weight: 800;
+  font-size: 18px;
+  min-height: 0;
+  color: #d8dee9;
+}
+
+window#waybar {
+  background: #2e3440;
+  margin: 0;
+  padding: 0;
+}
+
+tooltip {
+  background: #3b4252;
+  border-radius: 4px;
+  border: 2px solid #4c566a;
+  color: #d8dee9;
+}
+
+#language,
+#custom-updates,
+#custom-weather,
+#window,
+taskbar,
+#tags,
+#custom-playerctl,
+#clock,
+#battery,
+#pulseaudio,
+#cpu,
+#temperature,
+#backlight,
+#network,
+#workspaces,
+#tray,
+#cava,
+#keyboard-state,
+#custom-notification,
+#custom-power {
+  background: #3b4252;
+  padding: 0 10px;
+  margin: 5px 0 0 0;
+}
+
+#tags {
+  border-radius: 4px;
+  border: 2px solid #4c566a;
+  margin-left: 4px;
+  padding: 0 6px 0 10px;
+  background: #3b4252;
+}
+
+#tags button {
+  background: none;
+  color: #88c0d0;
+  margin-right: 4px;
+  transition: 0.3s;
+}
+
+#tags button:not(.occupied):not(.focused) {
+  font-size: 0;
+  min-width: 0;
+  min-height: 0;
+  margin: -17px;
+  padding: 0;
+  color: transparent;
+  background: transparent;
+}
+
+#tags button.occupied,
+#tags button.overview {
+  color: #88c0d0;
+}
+
+#tags button:hover {
+  color: #a3be8c;
+}
+
+#tags button.focused {
+  background-color: #88c0d0;
+  color: #2e3440;
+  border-radius: 3px;
+}
+
+#tags button.urgent {
+  background-color: #bf616a;
+  color: #2e3440;
+  border-radius: 3px;
+}
+
+#tray,
+#network,
+#language,
+#custom-updates,
+#custom-playerctl,
+#clock,
+#pulseaudio,
+#cpu,
+#temperature,
+#battery,
+#custom-weather,
+#custom-notification,
+#custom-power {
+  border: 2px solid #88c0d0;
+  border-radius: 4px;
+}
+
+#tray {
+  margin: 0 4px;
+  padding: 2px 9px;
+}
+
+#network {
+  color: #88c0d0;
+  padding: 2px 9px;
+}
+
+workspaces {
+  background: #3b4252;
+  border-radius: 4px;
+  border: 2px solid #4c566a;
+  margin-left: 4px;
+  padding: 0 6px 0 4px;
+}
+
+#language {
+  color: #88c0d0;
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  min-width: 24px;
+}
+
+#keyboard-state {
+  background: none;
+  color: #88c0d0;
+  border: none;
+  padding-top: 1px;
+}
+
+#custom-updates {
+  color: #88c0d0;
+  border-radius: 0 4px 4px 0;
+  border-left: 0;
+}
+
+window {
+  background: #3b4252;
+  border: 2px solid #4c566a;
+  border-radius: 4px;
+  margin: 0 10px;
+  color: #d8dee9;
+}
+
+taskbar {
+  background: #3b4252;
+  border: 2px solid #4c566a;
+  border-radius: 4px;
+  margin: 0 10px;
+  color: #d8dee9;
+}
+
+taskbar.empty {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding-left: 10px;
+}
+
+taskbar button {
+  margin-right: 3px;
+  transition: 0.3s;
+}
+
+taskbar button.minimized,
+taskbar button.active {
+  background-color: #88c0d0;
+  color: #2e3440;
+  border-radius: 3px;
+}
+
+taskbar button.urgent {
+  background-color: #bf616a;
+  color: #2e3440;
+  border-radius: 3px;
+}
+
+#custom-playerctl {
+  color: #88c0d0;
+  border-right: 0;
+  border-left: 0;
+}
+
+cava {
+  background: #3b4252;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #4c566a;
+  margin-left: 4px;
+  color: #d8dee9;
+}
+
+clock {
+  background: #3b4252;
+  color: #d8dee9;
+  border: 2px solid #4c566a;
+  border-radius: 4px 0 0 4px;
+}
+
+#pulseaudio,
+#cpu,
+#temperature,
+#battery {
+  color: #88c0d0;
+}
+
+backlight {
+  background: #3b4252;
+  color: #d8dee9;
+  border: 2px solid #4c566a;
+  border-radius: 0 4px 4px 0;
+  margin-right: 4px;
+}
+
+#custom-weather,
+#custom-notification,
+#custom-power {
+  color: #88c0d0;
+}
+
+#custom-notification {
+  min-width: 18px;
+}
+

@@ -1,0 +1,431 @@
+
+  {
+    // ============================================================================
+    // AGENT & AI SETTINGS
+    // ============================================================================
+    "agent_servers": {
+      "your_agent": {
+        "command": "path_to_executable",
+        "args": [],
+        "env": {}
+      }
+    },
+    "agent": {
+      "default_model": {
+        "provider": "Zed",
+        "model": "Zed AI"
+      },
+      "model_parameters": []
+    },
+
+    // ============================================================================
+    // EDITOR APPEARANCE & UI
+    // ============================================================================
+    "base_keymap": "Emacs",
+    "vim_mode": true,
+    "icon_theme": "Catppuccin Mocha",
+    "ui_font_family": "JetBrains Mono",
+    "ui_font_size": 16,
+    "buffer_font_family": "JetBrains Mono",
+    "buffer_font_size": 15,
+    "buffer_line_height": {
+      "custom": 1.5
+    },
+    "theme": {
+      "mode": "dark",
+      "light": "Nord",
+      "dark": "Nord Dark"
+    },
+  
+    // Улучшенная цветовая тема для курсора и подсветки
+    "cursor_blink": false,
+    "show_whitespaces": "selection",
+    "relative_line_numbers": true,
+    "scroll_beyond_last_line": "one_page",
+    "vertical_scroll_margin": 3,
+    "scrollbar": {
+      "show": "auto",
+      "git_diff": true,
+      "selections": true,
+      "diagnostics": true
+    },
+
+    // ============================================================================
+    // EDITOR BEHAVIOR
+    // ============================================================================
+    "auto_save": "on_focus_change",
+    "auto_save_delay": 1000,
+    "format_on_save": "on",
+    "ensure_final_newline_on_save": true,
+    "remove_trailing_whitespace_on_save": true,
+    "soft_wrap": "editor_width",
+    "tab_size": 4,
+    "hard_tabs": false,
+    "show_inline_completions": true,
+    "use_autoclose": true,
+    "always_treat_brackets_as_autoclosed": true,
+  
+    // Умная работа с отступами
+    "indent_guides": {
+      "enabled": true,
+      "coloring": "indent_aware",
+      "line_width": 1,
+      "active_line_width": 2
+    },
+
+    // ============================================================================
+    // FILE MANAGEMENT
+    // ============================================================================
+    "project_panel": {
+      "button": true,
+      "default_width": 280,
+      "dock": "left",
+      "file_icons": true,
+      "folder_icons": true,
+      "git_status": true,
+      "indent_size": 20,
+      "auto_fold_dirs": true,
+      "auto_reveal_entries": true
+    },
+  
+    "file_scan_exclusions": [
+      "**/.git",
+      "**/.svn",
+      "**/.hg",
+      "**/CVS",
+      "**/.DS_Store",
+      "**/Thumbs.db",
+      "**/.classpath",
+      "**/.settings",
+      "**/target",
+      "**/node_modules",
+      "**/.venv",
+      "**/__pycache__"
+    ],
+
+    // ============================================================================
+    // TERMINAL
+    // ============================================================================
+    "terminal": {
+      "dock": "bottom",
+      "default_height": 400,
+      "font_family": "JetBrains Mono",
+      "font_size": 14,
+      "line_height": {
+        "custom": 1.3
+      },
+      "blinking": "off",
+      "alternate_scroll": "off",
+      "option_as_meta": false,
+      "copy_on_select": false,
+      "button": true,
+      "toolbar": {
+        "title": true
+      },
+      "shell": {
+        "program": "zsh"
+      },
+      "env": {
+        "TERM": "xterm-256color"
+      }
+    },
+
+    // ============================================================================
+    // GIT INTEGRATION
+    // ============================================================================
+    "git": {
+      "enabled": true,
+      "autoFetch": true,
+      "autoFetchInterval": 300,
+      "git_gutter": "tracked_files",
+      "inline_blame": {
+        "enabled": true,
+        "delay_ms": 600
+      }
+    },
+
+    // ============================================================================
+    // SEARCH & NAVIGATION
+    // ============================================================================
+    "search": {
+      "whole_word": false,
+      "case_sensitive": false,
+      "include_ignored": false,
+      "regex": false
+    },
+    "outline_panel": {
+      "dock": "right",
+      "default_width": 300,
+      "button": true
+    },
+
+    // ============================================================================
+    // COLLABORATION
+    // ============================================================================
+    "collaboration_panel": {
+      "button": true,
+      "dock": "left",
+      "default_width": 280
+    },
+    "calls": {
+      "mute_on_join": false,
+      "share_on_join": false
+    },
+
+    // ============================================================================
+    // DIAGNOSTICS & ERRORS
+    // ============================================================================
+    "diagnostics": {
+      "include_warnings": true
+    },
+    "show_completion_documentation": true,
+    "show_method_separators": true,
+
+    // ============================================================================
+    // RUST & LSP CONFIGURATION
+    // ============================================================================
+    "languages": {
+      "Rust": {
+        "tab_size": 4,
+        "hard_tabs": false,
+        "format_on_save": "on",
+        "formatter": "language_server",
+        "code_actions_on_format": {
+          "source.organizeImports": true
+        },
+        "preferred_line_length": 100,
+        "soft_wrap": "preferred_line_length"
+      }
+    },
+
+    "lsp": {
+      "rust-analyzer": {
+        "binary": {
+          "ignore_system_version": true,
+          "path": "/etc/profiles/per-user/tey/bin/rust-analyzer",
+          "arguments": []
+        },
+        "fetch": {
+          "pre_release": false
+        },
+        "initialization_options": {
+          // Расширенная конфигурация автодополнений
+          "completion": {
+            "addCallArgumentSnippets": true,
+            "addCallParenthesis": true,
+            "autoimport": {
+              "enable": true
+            },
+            "autoself": {
+              "enable": true
+            },
+            "postfix": {
+              "enable": true
+            },
+            "privateEditable": {
+              "enable": false
+            }
+          },
+        
+          // Продвинутые inlay hints
+          "inlayHints": {
+            "bindingModeHints": {
+              "enable": true
+            },
+            "chainingHints": {
+              "enable": true
+            },
+            "closingBraceHints": {
+              "enable": true,
+              "minLines": 10
+            },
+            "closureReturnTypeHints": {
+              "enable": "always"
+            },
+            "discriminantHints": {
+              "enable": "fieldless"
+            },
+            "expressionAdjustmentHints": {
+              "enable": "reborrow"
+            },
+            "lifetimeElisionHints": {
+              "enable": "skip_trivial",
+              "useParameterNames": true
+            },
+            "maxLength": 25,
+            "parameterHints": {
+              "enable": true
+            },
+            "reborrowHints": {
+              "enable": "mutable"
+            },
+            "renderColons": true,
+            "typeHints": {
+              "enable": true,
+              "hideClosureInitialization": false,
+              "hideNamedConstructor": false
+            }
+          },
+        
+          // Cargo и сборка
+          "cargo": {
+            "autoreload": true,
+            "buildScripts": {
+              "enable": true
+            },
+            "features": "all",
+            "runBuildScripts": true
+          },
+        
+          // Проверка кода
+          "check": {
+            "command": "clippy",
+            "allTargets": true,
+            "extraArgs": [
+              "--",
+              "-W",
+              "clippy::pedantic",
+              "-W",
+              "clippy::nursery"
+            ]
+          },
+        
+          // Диагностика
+          "diagnostics": {
+            "enable": true,
+            "experimental": {
+              "enable": true
+            },
+            "disabled": [],
+            "remapPrefix": {},
+            "warningsAsHint": [],
+            "warningsAsInfo": []
+          },
+        
+          // Навигация и поиск
+          "files": {
+            "excludeDirs": [
+              "target"
+            ]
+          },
+        
+          // Линзы кода (code lens)
+          "lens": {
+            "enable": true,
+            "run": {
+              "enable": true
+            },
+            "debug": {
+              "enable": true
+            },
+            "implementations": {
+              "enable": true
+            },
+            "references": {
+              "adt": {
+                "enable": true
+              },
+              "enumVariant": {
+                "enable": true
+              },
+              "method": {
+                "enable": true
+              },
+              "trait": {
+                "enable": true
+              }
+            }
+          },
+        
+          // Помощь при наведении
+          "hover": {
+            "actions": {
+              "enable": true,
+              "implementations": {
+                "enable": true
+              },
+              "references": {
+                "enable": true
+              },
+              "run": {
+                "enable": true
+              }
+            },
+            "documentation": {
+              "enable": true,
+              "keywords": {
+                "enable": true
+              }
+            },
+            "links": {
+              "enable": true
+            }
+          },
+        
+          // Семантическая подсветка
+          "semanticHighlighting": {
+            "strings": {
+              "enable": true
+            },
+            "punctuation": {
+              "enable": true,
+              "separate": {
+                "macro": {
+                  "bang": true
+                }
+              },
+              "specialization": {
+                "enable": true
+              }
+            },
+            "operator": {
+              "enable": true,
+              "specialization": {
+                "enable": true
+              }
+            }
+          },
+        
+          // Импорты и форматирование
+          "imports": {
+            "granularity": {
+              "group": "module"
+            },
+            "prefix": "self",
+            "merge": {
+              "glob": true
+            }
+          },
+        
+          // Процедурные макросы
+          "procMacro": {
+            "enable": true,
+            "attributes": {
+              "enable": true
+            }
+          },
+        
+          // Рабочее пространство
+          "workspace": {
+            "symbol": {
+              "search": {
+                "kind": "all_symbols"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // ============================================================================
+    // PERFORMANCE & OPTIMIZATION
+    // ============================================================================
+    "journal": {
+      "path": "~/.local/share/zed/journal",
+      "hour_format": "hour24"
+    },
+    "telemetry": {
+      "diagnostics": false,
+      "metrics": false
+    }
+  }

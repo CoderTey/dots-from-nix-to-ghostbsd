@@ -1,0 +1,9 @@
+theme = "nord-night"
+
+[keys.normal]
+C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+
+[editor]
+mouse = false
+line-number = "relative"
+bufferline = "multiple"
